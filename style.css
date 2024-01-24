@@ -10,6 +10,7 @@
     margin: auto;
 }
 .header{
+    width: 80%;
     height: 4rem;
     padding: 0.5rem 2rem;
     border: 1px solid green;
@@ -18,9 +19,12 @@
     align-items: center;
     background-color: rgb(18, 109, 109);
     text-align: center;
+    z-index: 100;
+    position: fixed;
+    top: 0;
 }
  .logo{
-    width: 3rem;
+    width: 5rem;
     height: 3rem;
     border: 2px solid salmon;
     border-top-right-radius: 1rem;
@@ -66,13 +70,71 @@
 }
 
 
+/* hero section */
 
-
-.product{
+#hero-section{
     height: 50vh;
-    background-color:hotpink;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 } 
 
+img{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
+/* product section */
+.feature{
+    height: 3rem;
+    text-align: center;
+    font-size: 2rem;
+    background-image: linear-gradient(to right, green, pink);
+    margin-top: 0.6rem;
+}
+#product{
+    /* height: 120vh; */
+    margin: 0.5rem 0;
+    border: 1px solid blue;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.cloth{
+    width: 13rem;
+    height: 20rem;
+    padding: 0.8rem 0.9rem;
+    border-radius: 0.8rem;
+    border: 1px solid black;
+    /* background-color: cornsilk; */
+    box-shadow: 5px 5px 10px gray;
+    cursor: pointer;
+}
+.cloth:hover{
+    box-shadow: 0.7rem 0.7rem 1rem gray;
+}
+.cloth img{
+    width:100% ;
+    height: 65%;
+    border: 1px solid gray;
+    border-radius: 0.8rem;
+}
+.cloth .stars{
+    font-size: 0.5rem;
+    background-color: orange; 
+}
+.cloth .detail h5{
+    color: lightseagreen;
+}
+
+.cloth .cart{
+    display: none;
+}
+.cloth .cart.show{
+    display: block;
+}
 @media(max-width:1024px){
     .navbar{
         width: 60%;

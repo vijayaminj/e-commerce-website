@@ -6,3 +6,17 @@ bar.addEventListener("click",()=>{
     navbar.classList.toggle("open");
     
 })
+
+let cloth=document.querySelectorAll(".cloth");
+
+cloth.forEach((box)=>{
+    console.log(box);
+    box.addEventListener("click",()=>{
+        let cart=box.querySelectorAll(".cart");
+
+        cart.forEach((pro)=>{
+            pro.classList.toggle("show");
+        })
+
+    })
+})
